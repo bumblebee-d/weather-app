@@ -21,7 +21,7 @@
 
         <p class="tagline">Check the vibes anywhere in the world 🌍</p>
 
-        <!-- Feature #2: search form -->
+        <!-- Search form -->
         <form id="search-form" class="search-form">
           <input
             type="search"
@@ -38,28 +38,33 @@
         <!-- MAIN CURRENT CITY -->
         <section class="current-weather">
           <div class="current-left">
-            <!-- Feature #1: current day + time -->
+            <!-- current day + time -->
             <p id="current-time" class="current-time">Tuesday 16:00</p>
 
-            <!-- city name that changes after search -->
+            <!-- city name updated by JS/API -->
             <h1 id="city-name" class="city-name">Paris</h1>
 
             <p class="weather-desc">
-              moderate rain · Humidity:
-              <strong>87%</strong> · Wind:
-              <strong>7.2 km/h</strong>
+              <span id="weather-description">moderate rain</span> · Humidity:
+              <strong id="humidity">87%</strong> · Wind:
+              <strong id="wind">7.2 km/h</strong>
             </p>
           </div>
 
           <div class="current-right">
             <div class="temp-card">
-              <span class="temp-emoji">☀️</span>
-              <span class="temp-value">14°C</span>
+              <img
+                id="weather-icon"
+                class="temp-icon"
+                src=""
+                alt="Weather icon"
+              />
+              <span id="temperature" class="temp-value">14°C</span>
             </div>
           </div>
         </section>
 
-        <!-- EXTRA COUNTRIES + WEATHER -->
+        <!-- EXTRA COUNTRIES + WEATHER (static) -->
         <section class="other-cities">
           <h2 class="other-title">Around the world</h2>
 
@@ -73,7 +78,9 @@
             <article class="city-card">
               <p class="city-label">🇬🇧 London, UK</p>
               <p class="city-temp">🌧️ 11°C</p>
-              <p class="city-meta">Light rain · Humidity 82% · Wind 18 km/h</p>
+              <p class="city-meta">
+                Light rain · Humidity 82% · Wind 18 km/h
+              </p>
             </article>
 
             <article class="city-card">
@@ -99,12 +106,23 @@
         <p>
           Built with ❤️ by
           <a href="#" target="_blank">Trini</a> ·
-          <a href="#" target="_blank">GitHub</a> ·
-          <a href="#" target="_blank">Netlify</a>
+          <a
+            href="https://github.com/bumblebee-d/weather-app"
+            target="_blank"
+            >Open-source code on GitHub</a
+          >
+          ·
+          <a
+            href="https://skycast-by-trini.netlify.app"
+            target="_blank"
+            >Hosted on Netlify</a
+          >
         </p>
       </footer>
     </div>
 
+    <!-- axios for API -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- our JS file -->
     <script src="script.js"></script>
   </body>

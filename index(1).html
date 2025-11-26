@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather Application</title>
+
+    <!-- our CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- soft glow background -->
+    <div class="gradient-bg"></div>
+
+    <div class="app-shell">
+      <header class="app-header">
+        <h2 class="logo">
+          <span class="logo-dot"></span>
+          SkyCast
+        </h2>
+
+        <p class="tagline">Check the vibes anywhere in the world 🌍</p>
+
+        <!-- Feature #2: search form -->
+        <form id="search-form" class="search-form">
+          <input
+            type="search"
+            id="city-input"
+            placeholder="Search for a city…"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+
+      <main>
+        <!-- MAIN CURRENT CITY -->
+        <section class="current-weather">
+          <div class="current-left">
+            <!-- Feature #1: current day + time -->
+            <p id="current-time" class="current-time">Tuesday 16:00</p>
+
+            <!-- city name that changes after search -->
+            <h1 id="city-name" class="city-name">Paris</h1>
+
+            <p class="weather-desc">
+              moderate rain · Humidity:
+              <strong>87%</strong> · Wind:
+              <strong>7.2 km/h</strong>
+            </p>
+          </div>
+
+          <div class="current-right">
+            <div class="temp-card">
+              <span class="temp-emoji">☀️</span>
+              <span class="temp-value">14°C</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXTRA COUNTRIES + WEATHER -->
+        <section class="other-cities">
+          <h2 class="other-title">Around the world</h2>
+
+          <div class="city-grid">
+            <article class="city-card">
+              <p class="city-label">🇿🇦 Durban, South Africa</p>
+              <p class="city-temp">☀️ 27°C</p>
+              <p class="city-meta">Clear · Humidity 60% · Wind 9 km/h</p>
+            </article>
+
+            <article class="city-card">
+              <p class="city-label">🇬🇧 London, UK</p>
+              <p class="city-temp">🌧️ 11°C</p>
+              <p class="city-meta">Light rain · Humidity 82% · Wind 18 km/h</p>
+            </article>
+
+            <article class="city-card">
+              <p class="city-label">🇺🇸 New York, USA</p>
+              <p class="city-temp">⛅ 19°C</p>
+              <p class="city-meta">
+                Partly cloudy · Humidity 70% · Wind 13 km/h
+              </p>
+            </article>
+
+            <article class="city-card">
+              <p class="city-label">🇯🇵 Tokyo, Japan</p>
+              <p class="city-temp">🌤️ 23°C</p>
+              <p class="city-meta">
+                Sunny intervals · Humidity 65% · Wind 10 km/h
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          Built with ❤️ by
+          <a href="#" target="_blank">Trini</a> ·
+          <a href="#" target="_blank">GitHub</a> ·
+          <a href="#" target="_blank">Netlify</a>
+        </p>
+      </footer>
+    </div>
+
+    <!-- our JS file -->
+    <script src="script.js"></script>
+  </body>
+</html>
